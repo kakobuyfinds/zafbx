@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>MyCNBox Spreadsheet: Finds, Sizing & QC Fieldnotes</title>
+<meta name="description" content="Explore a practical MyCNBox spreadsheet guide: browse fashion categories, compare measurements, review QC photos and prepare a clear shipping checklist.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#39234b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="MyCNBox Spreadsheet: Finds, Sizing & QC Fieldnotes">
+<meta property="og:description" content="A calmer way to shortlist fashion finds: category shortcuts, measurement checks, photo review and parcel planning.">
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0603/3031/1875/files/2_09218033-5f07-43c8-b0cd-f42cf5175855_720x.jpg?v=1708781262">
+<meta property="og:image:alt" content="Red Nike Court Vision Low sneaker with a white Swoosh and sole">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MyCNBox Spreadsheet: Finds, Sizing & QC Fieldnotes">
+<meta name="twitter:description" content="An independent guide to finding, comparing and checking fashion references before ordering.">
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0603/3031/1875/files/2_09218033-5f07-43c8-b0cd-f42cf5175855_720x.jpg?v=1708781262">
+<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+<style>
+:root{color-scheme:light;--paper:#f7f5ef;--ink:#28222d;--plum:#39234b;--lime:#e0ed9a;--line:#dcd7df;--muted:#61576b;--white:#fff;--radius:18px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-underline-offset:4px}
+a:focus-visible,summary:focus-visible{outline:3px solid #7653a4;outline-offset:5px}
+.wrap{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+.top{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:850;letter-spacing:.09em;text-decoration:none;font-size:18px}
+.logo small{display:block;font-size:10px;letter-spacing:.19em;color:var(--muted);font-weight:600}
+.top-link{font-size:14px;font-weight:700}
+.category-section{padding:24px 0 30px}
+.label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--muted);margin:0 0 12px}
+.categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.categories a{background:var(--white);border:1px solid var(--line);padding:12px 14px;text-decoration:none;font-size:13px;font-weight:650;display:flex;justify-content:space-between;gap:8px;border-radius:6px}
+.categories a::after{content:"↗";color:#725e84}
+.categories a:hover{border-color:var(--plum);background:#f0ebf4}
+.hero{display:grid;grid-template-columns:1.08fr 1fr;background:var(--plum);border-radius:var(--radius);overflow:hidden}
+.hero-copy{padding:48px 40px;color:var(--white);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.hero .label{color:var(--lime)}
+h1{font-size:clamp(36px,4.5vw,60px);line-height:1.04;letter-spacing:-.055em;margin:8px 0 24px;overflow-wrap:break-word}
+.hero-copy>p:not(.label){color:#e2dbe9;max-width:42ch;margin:0 0 27px;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;background:var(--lime);color:var(--plum);padding:13px 20px;font-weight:800;text-decoration:none;border-radius:6px}
+.btn:hover{background:#eef7bf}
+.hero figure{margin:0;display:flex;flex-direction:column;background:#fff}
+.hero img{width:100%;height:auto;aspect-ratio:1.2;object-fit:contain;padding:24px}
+.hero figcaption{margin-top:auto;padding:16px 24px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.disclosure{font-size:12px;color:var(--muted);padding:14px 2px 0;margin:0;max-width:100ch}
+.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;padding:66px 0 48px;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(27px,3vw,38px);line-height:1.16;letter-spacing:-.035em;margin:0 0 20px}
+h3{font-size:21px;line-height:1.3;letter-spacing:-.02em;margin:0 0 13px}
+p{margin:0 0 16px}
+.intro p:last-child{margin-bottom:0}
+.note{padding:19px 22px;background:#ece6f1;border-left:3px solid #7653a4;margin-top:20px;font-size:14px}
+.section{padding:56px 0;border-bottom:1px solid var(--line)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:26px}
+.section-head h2{margin:0}
+.section-head>p{max-width:42ch;color:var(--muted);font-size:14px;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.gallery figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;padding:16px}
+.gallery figcaption{padding:17px;border-top:1px solid var(--line)}
+.gallery strong{display:block;font-size:15px;margin-bottom:5px}
+.gallery span{display:block;font-size:12px;color:var(--muted)}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.check{border-top:3px solid var(--plum);padding-top:20px}
+.number{display:block;font-size:12px;color:var(--muted);margin-bottom:15px;font-weight:800}
+.check p{font-size:15px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff;margin-top:30px}
+table{border-collapse:collapse;width:100%;min-width:620px;text-align:left;font-size:14px}
+caption{text-align:left;padding:18px 20px;font-size:15px;font-weight:750}
+th,td{padding:15px 20px;border-top:1px solid var(--line);vertical-align:top}
+thead th{background:#eee9f2;font-size:12px}
+tbody th{font-weight:700;width:20%}
+.journal{display:grid;grid-template-columns:230px 1fr;gap:55px}
+.journal-aside{align-self:start}
+.journal-aside p{font-size:14px;color:var(--muted)}
+.articles article+article{border-top:1px solid var(--line);margin-top:28px;padding-top:28px}
+.article-meta{font-size:11px;letter-spacing:.13em;color:var(--muted);text-transform:uppercase;font-weight:750;margin:0 0 10px}
+.articles h3{font-size:25px}
+.articles p{font-size:15px}
+.articles p:last-child{margin-bottom:0}
+.faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px}
+details{border-top:1px solid var(--line);padding:19px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{font-weight:750;cursor:pointer;line-height:1.4;padding-right:12px}
+details p{margin:14px 0 0;font-size:15px;color:var(--muted)}
+.closing{margin:48px 0;background:var(--lime);border-radius:var(--radius);padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.closing h2{font-size:29px;margin-bottom:8px}
+.closing p{margin:0;max-width:60ch;font-size:14px}
+.closing .btn{background:var(--plum);color:#fff;white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:12px}
+.footer-row{display:flex;justify-content:space-between;gap:30px}
+footer p{max-width:85ch}
+@media(max-width:900px){
+.categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+.hero-copy{padding:34px 28px}
+.intro,.faq-layout{gap:30px}
+.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.journal{grid-template-columns:190px 1fr;gap:28px}
+.checks{gap:18px}
+}
+@media(max-width:640px){
+.wrap{width:calc(100% - 28px)}
+.top{min-height:74px}
+.top-link{font-size:12px}
+.categories{grid-template-columns:repeat(2,minmax(0,1fr))}
+.categories a{padding:11px 10px;font-size:12px}
+.category-section{padding:20px 0}
+.hero{grid-template-columns:1fr}
+.hero-copy{padding:35px 25px}
+.hero img{aspect-ratio:1.45;padding:14px;max-height:330px}
+h1{font-size:43px}
+.intro,.faq-layout,.journal{grid-template-columns:1fr;gap:22px}
+.intro{padding:42px 0}
+.section{padding:40px 0}
+.section-head{display:block}
+.section-head>p{margin-top:14px}
+.gallery{gap:10px}
+.gallery img{padding:10px}
+.gallery figcaption{padding:12px}
+.checks{grid-template-columns:1fr;gap:20px}
+.check{padding-top:15px}
+.number{margin-bottom:8px}
+.closing{display:block;padding:26px 23px;margin:32px 0}
+.closing .btn{margin-top:20px}
+.footer-row{display:block}
+th,td{padding:13px}
+}
+@media(prefers-reduced-motion:no-preference){
+a{transition:background-color .15s,border-color .15s}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "@id":"#page",
+      "name":"MyCNBox Spreadsheet: Finds, Sizing & QC Fieldnotes",
+      "description":"An independent fashion research guide with category shortcuts, measurement checks, QC photo guidance and shipping preparation.",
+      "inLanguage":"en",
+      "about":{"@type":"Thing","name":"MyCNBox spreadsheet"},
+      "hasPart":[{"@id":"#finds"},{"@id":"#sizing"},{"@id":"#qc"},{"@id":"#shipping"},{"@id":"#faq"}]
+    },
+    {
+      "@type":"Article",
+      "@id":"#finds",
+      "headline":"MyCNBox finds: shortlist the item, not the thumbnail",
+      "inLanguage":"en",
+      "articleSection":"Product research",
+      "description":"Save the original seller link, item identifier, selected variant and check date before comparing clothing and footwear references.",
+      "isPartOf":{"@id":"#page"}
+    },
+    {
+      "@type":"Article",
+      "@id":"#sizing",
+      "headline":"MyCNBox sizing guide: start with something that fits",
+      "inLanguage":"en",
+      "articleSection":"Fit and measurements",
+      "description":"Compare garment measurements and model-specific footwear guidance, keeping measurement methods and units consistent.",
+      "isPartOf":{"@id":"#page"}
+    },
+    {
+      "@type":"Article",
+      "@id":"#qc",
+      "headline":"MyCNBox QC guide: ask a question the photo can answer",
+      "inLanguage":"en",
+      "articleSection":"Photo review",
+      "description":"Use focused photo requests to review visible details, measurements and discrepancies without treating images as proof of authenticity.",
+      "isPartOf":{"@id":"#page"}
+    },
+    {
+      "@type":"Article",
+      "@id":"#shipping",
+      "headline":"MyCNBox shipping checklist: separate the cost layers",
+      "inLanguage":"en",
+      "articleSection":"Parcel preparation",
+      "description":"Record item costs, domestic delivery, optional services and international freight separately, then confirm route and packed dimensions.",
+      "isPartOf":{"@id":"#page"}
+    },
+    {
+      "@type":"FAQPage",
+      "@id":"#faq",
+      "inLanguage":"en",
+      "isPartOf":{"@id":"#page"},
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What is a MyCNBox spreadsheet?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"It is a product research list associated with searching for MyCNBox shopping references. It may be a sheet or a web directory. Use it to organize seller links and comparison notes, then confirm the live listing before ordering."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is this an official MyCNBox website?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. Fieldnotes is an independent editorial page. Its category shortcuts open CAFANS categories, and its other navigation links open the CAFANS homepage."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Does this page provide a downloadable spreadsheet?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No spreadsheet download is hosted here. This page provides category shortcuts and original buying guides. You can keep your own comparison sheet using the fields described in the articles."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Can QC photos prove authenticity or guarantee fit?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"No. Photos can help you inspect visible details and measurements, but they do not establish authenticity, comfort, durability or a guaranteed fit."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"How should I compare sizes across listings?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Measure a similar item you already own, use the same units and measurement method, and compare with the selected listing's size chart. Check whether the chart gives garment measurements or body measurements."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Is the listed item price the full delivered cost?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Do not assume so. Record the item price, domestic delivery, any applicable service charges and international freight separately. Check any destination charges and confirm the current total before paying."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/zafbx/">
+</head>
+<body>
+<!--
+Filename: index.html
+
+Primary topic:
+MyCNBox spreadsheet
+
+Secondary topics:
+MyCNBox finds
+MyCNBox sizing guide
+MyCNBox QC guide
+MyCNBox shipping checklist
+
+Semantic long-tail coverage integrated into the visible guide:
+1. original seller link verification
+2. clothing variant comparison
+3. sneaker size chart comparison
+4. hoodie chest measurement
+5. T-shirt shoulder width
+6. jacket sleeve length
+7. pants inseam measurement
+8. matching set size selection
+9. underwear fabric composition
+10. jersey print placement
+11. headwear circumference check
+12. accessory dimensions comparison
+13. handbag strap drop measurement
+14. scarf print scale comparison
+15. clothing QC photo checklist
+16. sneaker stitching photo review
+17. warehouse measurement photos
+18. close-up hardware inspection
+19. product color under neutral lighting
+20. item and domestic shipping costs
+21. international parcel weight estimate
+22. packed parcel dimensions
+23. shipping route restrictions
+24. delivery tracking expectations
+
+No canonical URL is set because the deployment address has not been supplied.
+-->
+<header>
+  <div class="wrap top">
+    <a class="logo" href="https://www.cafans.com" aria-label="Fieldnotes — open CAFANS">
+      FIELDNOTES<span aria-hidden="true"> /</span>
+      <small>FASHION RESEARCH, MADE CLEAR</small>
+    </a>
+    <a class="top-link" href="https://www.cafans.com">Explore CAFANS ↗</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="category-section" aria-labelledby="category-title">
+    <h2 class="label" id="category-title">Start with a category · CAFANS shortcuts</h2>
+    <nav class="categories" aria-label="Browse CAFANS fashion categories">
+      <a href="https://cafans.com/category-911-Shoes.html">Shoes</a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a>
+      <a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a>
+      <a href="https://cafans.com/category-914-Jackets.html">Jackets</a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a>
+      <a href="https://cafans.com/category-916-Headwear.html">Headwear</a>
+      <a href="https://cafans.com/category-917-Sets.html">Sets</a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a>
+      <a href="https://cafans.com/category-919-Jersey.html">Jersey</a>
+      <a href="https://cafans.com/category-920-Accessories.html">Accessories</a>
+    </nav>
+  </section>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <p class="label">The shortlist issue / 01</p>
+      <h1 id="page-title">MyCNBox spreadsheet.<br>Find your focus.</h1>
+      <p>Browse with a purpose. Keep the useful details, compare the fit, and give every promising find a second look before it becomes an order.</p>
+      <a class="btn" href="https://www.cafans.com">
+        Browse the CAFANS catalog <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <figure>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0603/3031/1875/files/2_09218033-5f07-43c8-b0cd-f42cf5175855_720x.jpg?v=1708781262"
+        alt="Red Nike Court Vision Low sneaker with a white Swoosh and white midsole"
+        width="720"
+        height="600"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async">
+      <figcaption>Nike Court Vision Low · a visual reference for shape, paneling and color contrast.</figcaption>
+    </figure>
+  </section>
+
+  <p class="disclosure">Independent editorial guide. Brand photographs illustrate design details; they are not CAFANS inventory records or evidence of affiliation. Category links open the specified CAFANS categories; all other navigation opens its homepage.</p>
+
+  <section class="intro" aria-labelledby="intro-title">
+    <div>
+      <p class="label">The useful answer</p>
+      <h2 id="intro-title">A research list is only the beginning.</h2>
+    </div>
+    <div>
+      <p>A <strong>MyCNBox spreadsheet</strong> is a product research list associated with searching for MyCNBox shopping references. It may take the form of a sheet or a web directory. Its useful job is to keep seller links and comparison notes together, so you can return to the exact item you meant to check.</p>
+      <p>This page pairs category shortcuts with a practical reading guide. Begin with the type of item you need, check the selected variant, and write down the detail that would make you keep or reject it.</p>
+      <div class="note">
+        <strong>A simple working record:</strong> original seller link, item identifier, color, size, measurements, open questions and the date you checked the listing. No downloadable sheet or live inventory feed is hosted here.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="reference-title">
+    <div class="section-head">
+      <div>
+        <p class="label">A visual study</p>
+        <h2 id="reference-title">Four references. Four things to notice.</h2>
+      </div>
+      <p>Use the photographs to practice comparison. The notes describe what to inspect in a listing, rather than promising a matching product.</p>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <img
+          src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-trainers--BL9U6PMI01_PM1_Interior%20view.jpg?wid=600&amp;hei=600"
+          alt="White Louis Vuitton LV Trainers with tonal panels and a thick sole"
+          width="600"
+          height="600"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <strong>Louis Vuitton / proportion</strong>
+          <span>Compare the toe shape, sole profile and panel placement from matching angles.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://media.gucci.com/style/DarkGray_Center_0_0_800x800/1678474021/726274_AAA9F_6627_001_083_0000_Light-Aphrodite-medium-shoulder-bag.jpg"
+          alt="Pink Gucci Aphrodite shoulder bag with a curved shape and gold-tone Double G detail"
+          width="800"
+          height="800"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <strong>Gucci / shape</strong>
+          <span>For a handbag strap drop measurement, check where the seller starts and ends the tape.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://assets.christiandior.com/is/image/diorprod/CPB9076ESPPC921_E01?wid=600&amp;hei=600&amp;fit=fit,1"
+          alt="Black and white Dior D-Bobby houndstooth hat with a broad brim and embroidered band"
+          width="600"
+          height="600"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <strong>Dior / structure</strong>
+          <span>Look at the brim and crown. Add a headwear circumference check before selecting a size.</span>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="https://cdn-images.buyma.com/imgdata/item/230623/0096172726/549978857/org.jpg"
+          alt="Orange Hermès Planifleurs square scarf with a multicolored floral map design"
+          width="600"
+          height="600"
+          loading="lazy"
+          decoding="async">
+        <figcaption>
+          <strong>Hermès / pattern</strong>
+          <span>A scarf print scale comparison works best when the full square and border are visible.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="decision-title">
+    <div class="section-head">
+      <div>
+        <p class="label">Before the shortlist grows</p>
+        <h2 id="decision-title">Make three checks that matter.</h2>
+      </div>
+      <p>A clear question is more useful than another saved thumbnail.</p>
+    </div>
+
+    <div class="checks">
+      <div class="check">
+        <span class="number">01 / IDENTITY</span>
+        <h3>Is it the same item?</h3>
+        <p>Start with original seller link verification. Match the item identifier, then make a clothing variant comparison: a shared cover image does not tell you which color, fabric or size is selected.</p>
+      </div>
+
+      <div class="check">
+        <span class="number">02 / FIT</span>
+        <h3>What will you measure?</h3>
+        <p>For a sneaker size chart comparison, check the model and the chart's units. For apparel, use a similar garment you own as a reference and keep the measuring method consistent.</p>
+      </div>
+
+      <div class="check">
+        <span class="number">03 / EVIDENCE</span>
+        <h3>What is still unknown?</h3>
+        <p>Write one unresolved question beside each candidate. An accessory dimensions comparison, a fabric label photo or a clearer view of the stitching may resolve it more effectively than a general description.</p>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <caption>Category notes to keep beside each saved link</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Record this</th>
+            <th scope="col">Check this before ordering</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Shoes</th>
+            <td>Selected size, model and chart units</td>
+            <td>Whether the chart describes foot length or another measurement.</td>
+          </tr>
+          <tr>
+            <th scope="row">Hoodies / T-shirts</th>
+            <td>Hoodie chest measurement; T-shirt shoulder width</td>
+            <td>Whether chest width is measured flat or stated as circumference.</td>
+          </tr>
+          <tr>
+            <th scope="row">Jackets / Pants</th>
+            <td>Jacket sleeve length; pants inseam measurement</td>
+            <td>The measurement starting point and any stated tolerance.</td>
+          </tr>
+          <tr>
+            <th scope="row">Sets / Underwear</th>
+            <td>Matching set size selection; underwear fabric composition</td>
+            <td>Whether top and bottom sizes can differ, plus the listing's return terms.</td>
+          </tr>
+          <tr>
+            <th scope="row">Jersey / Headwear</th>
+            <td>Jersey print placement; hat circumference</td>
+            <td>Chosen lettering, number, fit and adjustment range.</td>
+          </tr>
+          <tr>
+            <th scope="row">Accessories</th>
+            <td>Length, width, closures and material description</td>
+            <td>What the stated dimensions include and which detail photos are available.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section journal" aria-labelledby="journal-title">
+    <div class="journal-aside">
+      <p class="label">The reading desk</p>
+      <h2 id="journal-title">Small guides.<br>Better decisions.</h2>
+      <p>Four practical topics for a more useful comparison record. Read them here, then take your shortlist to the catalog.</p>
+      <a href="https://www.cafans.com">Continue browsing at CAFANS ↗</a>
+    </div>
+
+    <div class="articles">
+      <article id="finds" aria-labelledby="finds-title">
+        <p class="article-meta">Research / source details</p>
+        <h3 id="finds-title">MyCNBox finds: shortlist the item, not the thumbnail</h3>
+        <p>Start a shortlist with one use in mind: an everyday layer, a particular silhouette or an accessory of a certain size. Save the original listing and item identifier alongside the selected option. A screenshot can preserve context, but it should not replace the source link.</p>
+        <p>When two candidates look alike, compare the information that distinguishes them: measurements, fabric description, closure details and available photographs. Record missing information as an open question. If a link stops working, search using the saved identifier and verify any replacement rather than assuming the first similar image is the same item.</p>
+      </article>
+
+      <article id="sizing" aria-labelledby="sizing-title">
+        <p class="article-meta">Fit / measurement habits</p>
+        <h3 id="sizing-title">MyCNBox sizing guide: start with something that fits</h3>
+        <p>Lay out a similar garment you already wear comfortably. Measure it using the same points shown in the seller's diagram. Record centimeters or inches explicitly, and distinguish garment dimensions from the body measurements a chart may recommend.</p>
+        <p>For relaxed clothing, compare width and length separately; choosing a larger label can change both. For footwear, keep your foot measurement, the listing's model-specific guidance and your preferred fit together. If a chart is ambiguous, ask for clarification before deciding. A size label alone is too little information for a reliable comparison.</p>
+      </article>
+
+      <article id="qc" aria-labelledby="qc-title">
+        <p class="article-meta">QC / visible details</p>
+        <h3 id="qc-title">MyCNBox QC guide: ask a question the photo can answer</h3>
+        <p>A clothing QC photo checklist should focus on the selected color and size, print position, seams and visible marks. For a sneaker stitching photo review, request comparable views of both shoes. If fit is the concern, warehouse measurement photos should show the tape's starting point and the full span being measured.</p>
+        <p>Use a close-up hardware inspection for clasps, zips or buckles that are unclear in a wider shot. To compare product color under neutral lighting, request another image if shadows or exposure obscure it. Photos help you review what is visible; they do not prove authenticity, long-term durability or comfort.</p>
+      </article>
+
+      <article id="shipping" aria-labelledby="shipping-title">
+        <p class="article-meta">Planning / parcel notes</p>
+        <h3 id="shipping-title">MyCNBox shipping checklist: separate the cost layers</h3>
+        <p>Keep item and domestic shipping costs separate from any applicable service charges and international freight. An international parcel weight estimate is a planning note, not a final quote. Record packed parcel dimensions when available and check how the chosen route calculates chargeable weight.</p>
+        <p>Review shipping route restrictions for the destination and item type before paying. Confirm delivery tracking expectations, included services and any applicable destination charges with the provider. Compare options using the same parcel details; a lower headline amount may describe a different service. Keep the latest confirmed quote beside the date you checked it.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section faq-layout" aria-labelledby="faq-title">
+    <div>
+      <p class="label">Straight answers</p>
+      <h2 id="faq-title">Questions worth asking first.</h2>
+      <p>Use these answers to understand the page and decide what information you still need.</p>
+    </div>
+
+    <div id="faq">
+      <details open>
+        <summary>What is a MyCNBox spreadsheet?</summary>
+        <p>It is a product research list associated with searching for MyCNBox shopping references. It may be a sheet or a web directory. Use it to organize seller links and comparison notes, then confirm the live listing before ordering.</p>
+      </details>
+
+      <details>
+        <summary>Is this an official MyCNBox website?</summary>
+        <p>No. Fieldnotes is an independent editorial page. Its category shortcuts open CAFANS categories, and its other navigation links open the CAFANS homepage.</p>
+      </details>
+
+      <details>
+        <summary>Does this page provide a downloadable spreadsheet?</summary>
+        <p>No spreadsheet download is hosted here. This page provides category shortcuts and original buying guides. You can keep your own comparison sheet using the fields described in the articles.</p>
+      </details>
+
+      <details>
+        <summary>Can QC photos prove authenticity or guarantee fit?</summary>
+        <p>No. Photos can help you inspect visible details and measurements, but they do not establish authenticity, comfort, durability or a guaranteed fit.</p>
+      </details>
+
+      <details>
+        <summary>How should I compare sizes across listings?</summary>
+        <p>Measure a similar item you already own, use the same units and measurement method, and compare with the selected listing's size chart. Check whether the chart gives garment measurements or body measurements.</p>
+      </details>
+
+      <details>
+        <summary>Is the listed item price the full delivered cost?</summary>
+        <p>Do not assume so. Record the item price, domestic delivery, any applicable service charges and international freight separately. Check any destination charges and confirm the current total before paying.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <div>
+      <h2 id="closing-title">Keep the shortlist useful.</h2>
+      <p>Choose a category, save the details that matter, and return to each live listing before making your decision.</p>
+    </div>
+    <a class="btn" href="https://www.cafans.com">
+      Explore CAFANS <span aria-hidden="true">↗</span>
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div>
+      <p><strong>FIELDNOTES / MyCNBox spreadsheet guide</strong></p>
+      <p>Independent fashion research. This page is not operated by MyCNBox or affiliated with the pictured brands. Illustrative images do not confirm product availability, authenticity or seller quality.</p>
+    </div>
+    <a href="https://www.cafans.com">CAFANS homepage ↗</a>
+  </div>
+</footer>
+</body>
+</html>
